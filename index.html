@@ -3,25 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <title>TicTacToe</title>
+    <title>Seleccion de Proyecto</title>
 </head>
 <body>
-    <h1>TicTacToe</h1>
-    <div class="game-info">
-        <p>  <span id="actu-gana">Jugador actual: </span><span id="current-player">X</span></p>
-    </div>
-    <div class="game-board" id="game-board">
-        <div class="cell" data-id="cell-0"></div>
-        <div class="cell" data-id="cell-1"></div>
-        <div class="cell" data-id="cell-2"></div>
-        <div class="cell" data-id="cell-3"></div>
-        <div class="cell" data-id="cell-4"></div>
-        <div class="cell" data-id="cell-5"></div>
-        <div class="cell" data-id="cell-6"></div>
-        <div class="cell" data-id="cell-7"></div>
-        <div class="cell" data-id="cell-8"></div>
-    </div>
-    <button class="reset-button" id="reset-button" style="display: none;" onClick="Reiniciar()">Reiniciar Juego</button>
+    <h1>Elija el proyecto al que quiera dirigirse</h1>
+    <button onclick="window.location.href='tictactoe/tictactoe.html'">Ir a TicTacToe</button>
+    <button onclick="window.location.href='ListaCompra/listaCompra.html'">Ir a otra página</button>
     <script src="script.js"></script>
 </body>
 </html>
