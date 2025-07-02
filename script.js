@@ -25,9 +25,9 @@ const actu = document.getElementById("actu-gana");
 function Reiniciar() {
     celsSelected = 0;
     winCondition = false;
-    currentPlayerDisplay.textContent = 'X'; 
     currentPlayer = 'X';
     actu.textContent = 'Jugador actual: '; // Reset the message
+    currentPlayerDisplay.textContent = currentPlayer; // Reset the current player display
     cells.forEach(cell => {
         cell.textContent = '';
     });
