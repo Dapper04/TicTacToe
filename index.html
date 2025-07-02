@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>TicTacToe</h1>
+    <div class="game-info">
+        <p id="actu-gana">Jugador actual: <span id="current-player">X</span></p>
+        <p id="message"></p>
+    </div>
     <div class="game-board" id="game-board">
         <div class="cell" data-id="cell-0"></div>
         <div class="cell" data-id="cell-1"></div>
@@ -18,6 +22,7 @@
         <div class="cell" data-id="cell-7"></div>
         <div class="cell" data-id="cell-8"></div>
     </div>
+    <button class="reset-button" id="reset-button" style="display: none;" onClick="Reiniciar()">Reiniciar Juego</button>
     <script src="script.js"></script>
 </body>
 </html>
