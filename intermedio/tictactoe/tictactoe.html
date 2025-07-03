@@ -6,6 +6,13 @@
     <title>TicTacToe</title>
 </head>
 <body>
+    <div class="switch-container">
+        <p class="switchtext" id="modo">Modo Oscuro</p>
+        <label class="switch">
+            <input type="checkbox" id="toggle-bg-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
     <h1>TicTacToe</h1>
     <div class="game-info">
         <p>  <span id="actu-gana">Jugador actual: </span><span id="current-player">X</span></p>
@@ -22,7 +29,7 @@
         <div class="cell" data-id="cell-8"></div>
     </div>
     <button class="reset-button" id="reset-button" style="display: none;" onClick="Reiniciar()">Reiniciar Juego</button>
-    <button class="return-button" onclick="window.location.href='../index.html'">Volver al seleccionador</button>
+    <button class="return-button" onclick="window.location.href='../../index.html'">Volver al seleccionador</button>
     <script src="script.js"></script>
 </body>
 </html>

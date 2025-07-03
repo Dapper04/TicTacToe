@@ -6,9 +6,33 @@
     <title>Seleccion de Proyecto</title>
 </head>
 <body>
+    <div class="switch-container">
+        <p class="switchtext" id="modo">Modo Oscuro</p>
+        <label class="switch">
+            <input type="checkbox" id="toggle-bg-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
     <h1>Elija el proyecto al que quiera dirigirse</h1>
-    <button onclick="window.location.href='tictactoe/tictactoe.html'">Ir a TicTacToe</button>
-    <button onclick="window.location.href='ListaCompra/listaCompra.html'">Ir a otra página</button>
+
+    <h2> Nivel facil </h2>
+    <div class = "button-container">
+    <button class="CambioFacil" onclick="window.location.href='facil/'">Ir a (Por definir)</button>
+    <button class="CambioFacil" onclick="window.location.href='facil/'">Ir a (Por definir)</button>
+    </div>
+
+    <h2> Nivel intermedio </h2>
+    <div class = "button-container">
+    <button class="CambioInter" onclick="window.location.href='intermedio/tictactoe/tictactoe.html'">Ir a TicTacToe</button>
+    <button class="CambioInter" onclick="window.location.href='intermedio/ListaCompra/listaCompra.html'">Ir a Lista de la compra</button>
+    </div>
+
+    <h2> Nivel dificil </h2>
+    <div class = "button-container">
+    <button class="CambioDificil" onclick="window.location.href='dificil/'">Ir a (Por definir)</button>
+    <button class="CambioDificil" onclick="window.location.href='dificil/'">Ir a (Por definir)</button>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
