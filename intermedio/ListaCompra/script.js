@@ -40,10 +40,20 @@ function anadir() {
     const itemSpan = document.createElement('span');
     itemSpan.textContent = text;
     itemSpan.style.marginLeft = '10px';
-    itemSpan.style.flexGrow = '1'; // Para que ocupe el espacio disponible
+
+    //Creamos el botón de eliminar
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'reset-button';
+    deleteButton.textContent = 'Eliminar';
+    deleteButton.style.marginLeft = '10px';
+    deleteButton.addEventListener('click', function () {
+        contenedor.removeChild(itemLi);
+    });
+    
 
     itemLi.appendChild(checkbox);
     itemLi.appendChild(itemSpan);
+    itemLi.appendChild(deleteButton);
 
     // Añadir el nuevo elemento a la lista
     contenedor.appendChild(itemLi);
