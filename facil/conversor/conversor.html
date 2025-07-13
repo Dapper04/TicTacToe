@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Seleccion de Proyecto</title>
+</head>
+<body>
+    <div class="switch-container">
+        <p class="switchtext" id="modo">Modo Oscuro</p>
+        <label class="switch">
+            <input type="checkbox" id="toggle-bg-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="contenedor">
+        <!-- Títulos -->
+        <div>
+            <h1>Elije la unidad base</h1>
+        </div>
+        <div>
+            <h1>Elije la unidad a convertir</h1>
+        </div>
+
+        <!-- Selects -->
+        <div>
+            <select name="unidadBase" id="unidadBase">
+            <option value="">Selecciona una unidad</option>
+            <option value="metros">Metros</option>
+            <option value="kilometros">Kilómetros</option>
+            <option value="centimetros">Centímetros</option>
+            <option value="pulgadas">Pulgadas</option>
+            <option value="pies">Pies</option>
+            <option value="kilogramos">Kilogramos</option>
+            <option value="gramos">Gramos</option>
+            <option value="libras">Libras</option>
+            <option value="onzas">Onzas</option>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            </select>
+        </div>
+        <div>
+            <select name="unidadDestino" id="unidadDestino">
+            <option value="">Selecciona una unidad base primero</option>
+            </select>
+        </div>
+        
+        <!-- Inputs con símbolo igual -->
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <input type="number" class="input-num" id="valorBase" />
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <input type="number" class="input-num" id="valorResultado"/>
+        </div>
+        
+        <!-- Símbolo igual centrado entre las dos columnas -->
+        <div style="grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; position: relative; top: -45px;">
+            <span class="igual">=</span>
+        </div>
+        
+    </div>
+
+    <button class="convert-button" onclick="convertir()">convertir</button>
+
+
+
+     <button class="return-button" onclick="window.location.href='../../index.html'">Volver al seleccionador</button>
+    <script src="script.js"></script>
+</body>

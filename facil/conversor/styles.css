@@ -1,0 +1,164 @@
+.return-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1000;
+}
+h1, h2 {
+    color: white;
+    text-align: center;
+}
+
+h1.light-mode, h2.light-mode {
+    color: #111;
+}
+
+.switch-container {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switchtext {
+    margin: 0 0 6px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #f0f0f0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #222, 0 0 1px #000;
+    background: rgba(30,30,30,0.7);
+    padding: 4px 12px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+.switchtext.light-mode{
+    margin: 0 0 6px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #fff, 0 0 1px #ccc;
+    background: rgba(255,255,255,0.7);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #444;
+  transition: .4s;
+  border-radius: 28px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+body.light-mode {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: white;
+    color: #222;
+}
+
+/* Modo oscuro (por defecto) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    line-height: 1.6;
+    background-color: #111;
+    color: #f0f0f0;
+}
+
+/* Estilos para este proyecto */
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  text-align: center;
+  padding: 40px;
+  background-color: #111;  /* Fondo negro opcional */
+  color: white;            /* Texto blanco */
+}
+
+.contenedor select {
+  width: 90%;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.fila-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.input-num {
+  width: 150px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.igual {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.convert-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.convert-button:hover {
+    background-color: #0056b3;
+}
