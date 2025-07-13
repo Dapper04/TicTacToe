@@ -162,3 +162,26 @@ body {
 .convert-button:hover {
     background-color: #0056b3;
 }
+
+
+/* Modo claro para el contenedor */
+.contenedor.light-mode {
+  background-color: white;
+  color: #222;
+}
+
+.contenedor select.light-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.input-num.light-mode {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.igual.light-mode {
+  color: #222;
+}

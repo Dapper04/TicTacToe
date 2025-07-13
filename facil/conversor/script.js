@@ -6,7 +6,13 @@ toggleSwitch.addEventListener('change', function () {
     document.body.classList.toggle('light-mode');
     document.querySelectorAll('h1, h2').forEach(element => {
         element.classList.toggle('light-mode');
-    })
+    });
+    
+    // Aplicar modo claro a elementos del conversor
+    document.querySelector('.contenedor').classList.toggle('light-mode');
+    document.querySelectorAll('select, .input-num, .igual').forEach(element => {
+        element.classList.toggle('light-mode');
+    });
     
 });
 
