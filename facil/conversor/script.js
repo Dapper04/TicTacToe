@@ -103,17 +103,27 @@ function convertir() {
     const valorBase = parseFloat(document.getElementById('valorBase').value);
     const cambio = valor[unidadBase] / valor[unidadDestino];
     const resultado = valorBase * cambio;
-    if (unidadDestino === 'fahrenheit') {
+    if (unidadBase === 'celsius' && unidadDestino === 'fahrenheit') {
         // Convertir de Celsius a Fahrenheit
-        document.getElementById('valorResultado').value = (valor[unidadBase] * valor[unidadDestino]) + 32;
-    } else if (unidadDestino === 'kelvin') {
+        document.getElementById('valorResultado').value = (valorBase * valor[unidadDestino]) + 32;
+    } else if (unidadBase === 'fahrenheit' && unidadDestino === 'celsius') {
+        // Convertir de Fahrenheit a Celsius
+        document.getElementById('valorResultado').value = (valorBase - 32)/valor[unidadBase];
+    } else if (unidadBase === 'kelvin' && unidadDestino === 'celsius') {
+        // Convertir de Kelvin a Celsius
+        document.getElementById('valorResultado').value = valorBase - valor[unidadBase];
+    } else if (unidadBase === 'celsius' && unidadDestino === 'kelvin') {
         // Convertir de Celsius a Kelvin
-         document.getElementById('valorResultado').value = valor[unidadBase] + valor[unidadDestino];
-    }else {
+        document.getElementById('valorResultado').value = valorBase + valor[unidadDestino];
+    } else if (unidadBase === 'kelvin' && unidadDestino === 'fahrenheit') {
+        // Convertir de Kelvin a Fahrenheit
+        document.getElementById('valorResultado').value = (valorBase - valor[unidadBase]) * valor[unidadDestino] + 32;
+    } else if (unidadBase === 'fahrenheit' && unidadDestino === 'kelvin') {
+        // Convertir de Fahrenheit a Kelvin
+        document.getElementById('valorResultado').value = (valorBase - 32)/valor[unidadBase] + valor[unidadDestino];
+    }   else {
         document.getElementById('valorResultado').value = resultado.toFixed(5);
     }
-
-    
 
 }
 
